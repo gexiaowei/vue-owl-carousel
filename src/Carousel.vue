@@ -315,12 +315,16 @@ export default {
         }
       });
     }
+    this.owl = owl
   },
 
   methods: {
     generateUniqueId() {
       return Math.random().toString(36).substring(2, 15);
     },
+    trigger(event){
+      if(this.owl) this.owl.trigger('next.owl.carousel');
+    }
   },
 };
 
