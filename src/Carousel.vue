@@ -225,7 +225,9 @@ export default {
 
       prevHandler: "carousel_prev_" + this.generateUniqueId(),
       elementHandle: "carousel_" + this.generateUniqueId(),
-      nextHandler: "carousel_next_" + this.generateUniqueId()
+      nextHandler: "carousel_next_" + this.generateUniqueId(),
+
+      owl:null
     };
   },
 
@@ -324,8 +326,8 @@ export default {
         .toString(36)
         .substring(2, 15);
     },
-    trigger(event) {
-      if (this.owl) this.owl.trigger(event);
+    getOWL(){
+      return this.owl
     }
   }
 };
